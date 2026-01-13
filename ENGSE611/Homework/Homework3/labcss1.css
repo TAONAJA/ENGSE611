@@ -1,0 +1,41 @@
+/* ฝึกจัดการโครงสร้างด้วย Flexbox */
+.card-container {
+    display: flex; /* 1. ใช้ Flexbox จัดการ์ด 3 ใบในแถวเดียว */
+    justify-content: center; /* จัดให้อยู่กึ่งกลาง [cite: 901] */
+    gap: 20px; /* ระยะห่างระหว่างการ์ด [cite: 910] */
+    padding: 50px;
+    background-color: #f9f9f9; /* สีพื้นหลังอ่อนๆ เพื่อให้เห็นเงาชัดขึ้น */
+}
+
+/* ฝึกตกแต่ง CSS ตามเป้าหมาย */
+.card {
+    background-color: white; /* 2.1 พื้นหลังสีอ่อน */
+    border-radius: 12px; /* 2.2 มุมโค้ง */
+    padding: 25px;
+    width: 250px;
+    
+    /* 2.3 ใส่เงา (box-shadow) */
+    /* แนวนอน แนวตั้ง ความฟุ้ง สีโปร่งใส */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    
+    /* ทำให้การเคลื่อนไหวนุ่มนวล  */
+    transition: transform 0.3s ease; 
+}
+
+/* 3. เมื่อ mouse วางบนการ์ดให้ scale ใหญ่ขึ้นเล็กน้อย (hover effect) */
+.card:hover {
+    transform: scale(1.05); /* ขยายใหญ่ขึ้น 5% */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ดูเหมือนลอยขึ้น */
+    cursor: pointer;
+}
+
+/* ตกแต่งข้อความและคำอธิบาย */
+.card h3 {
+    margin-top: 0;
+    color: #333; /* ฝึกใช้สีเข้มสำหรับหัวข้อ */
+}
+
+.card p {
+    color: #666; /* ฝึกใช้สีเทาสำหรับคำอธิบาย */
+    font-size: 15px;
+}
