@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grade Check</title>
+
+<style>
+body{
+    font-family: Arial;
+    padding:20px;
+}
+
+
+button{
+    background:#28a9e0;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+
+#output{
+    margin-top:10px;
+    background:#111;
+    color:white;
+    padding:15px;
+    border-radius:10px;
+    border-left:5px solid #00ff66;
+    width:250px;
+}
+</style>
+
+</head>
+
+<body>
+
+<button onclick="checkGrade()">Run Code</button>
+
+<div id="output"></div>
+
+<script>
+
+function checkGrade(){
+
+let score = 38; 
+
+let grade = "";
+let result = "";
+
+if (score >= 80) {
+    grade = "A";
+} else if (score >= 70) {
+    grade = "B";
+} else if (score >= 60) {
+    grade = "C";
+} else if (score >= 50) {
+    grade = "D";
+} else {
+    grade = "F";
+}
+
+
+if (score >= 50) {
+    result = "ผ่าน";
+} else {
+    result = "ไม่ผ่าน";
+}
+
+
+document.getElementById("output").innerHTML =
+"คะแนนที่สุ่มได้: " + score + "<br>" +
+"เกรด: " + grade + "<br>" +
+"ผลสอบ: " + result;
+
+
+console.log("คะแนน:",score);
+console.log("เกรด:",grade);
+console.log("ผล:",result);
+
+}
+
+</script>
+
+</body>
+</html>

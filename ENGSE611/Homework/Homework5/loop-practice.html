@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="display"></div>
+
+    <script>
+        let output = "";
+
+        let maxNumber = 10; 
+
+        output += "<b>รายการตัวเลข:</b><br>";
+        for (let i = 0; i <= maxNumber; i++) {
+            let type = (i % 2 === 0) ? "(คู่)" : "(คี่)";
+            output += `${i} ${type}<br>`;
+            console.log(`${i} ${type}`);
+        }
+
+        output += "<br><b>นับทีละ 2:</b><br>";
+        for (let i = 0; i <= maxNumber; i += 2) {
+            output += `นับทีละ 2: ${i}<br>`;
+        }
+
+        output += "<br><b>นับถอยหลัง:</b><br>";
+        for (let i = 10; i >= 0; i--) {
+            output += `ถอยหลัง: ${i}<br>`;
+        }
+
+        document.getElementById("display").innerHTML = output;
+    </script>
+</body>
+</html>
